@@ -7,8 +7,11 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: "123"
       POSTGRES_DB: nest
+    volumes:
+      - pgdata:/var/lib/postgresql/data
     networks:
       - freecodecamp
-
+volumes:
+  pgdata:
 networks:
   freecodecamp: {}
